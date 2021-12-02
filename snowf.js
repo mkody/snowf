@@ -48,7 +48,7 @@
 		var o = this.options;
 		this.dom = type(o.dom) === 'string' ? document.querySelector(o.dom) : o.dom;
 		this.canvas = createEl('canvas', { className: PLUGIN_NAME + '-canvas' });
-		css(this.canvas, { position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none'});
+		css(this.canvas, { position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none'});
 		if (o.zIndex) css(this.canvas, { zIndex: o.zIndex});
 		this.dom.appendChild(this.canvas);
 		this.height = this.canvas.height = this.canvas.offsetHeight;
@@ -194,8 +194,8 @@
 		var o  = this.options,
 				H0 = this.canvas.height,
 				W0 = this.canvas.width,
-				H1 = this.dom.offsetHeight,
-				W1 = this.dom.offsetWidth;
+				H1 = window.innerHeight,
+				W1 = window.innerWidth;
 
 		this.canvas.height = this.height = H1;
 		this.canvas.width = this.width = W1;
