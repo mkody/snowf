@@ -52,6 +52,7 @@ snowf.init({
 Argument | Type | Default Value | Description
 :---: | :---: | :---: | ---
 **dom** | *HTMLDomElement, String* | *document.body* | The element that snowfall canvas append to.
+**onWindow** | *Boolean* | *false* | Switch to fixed position and use all the window space insead of attaching to a dom element.
 **amount** | *Number* | *50* | Number of snowflakes displayed at a time.
 **size** | *Number* | *5* | Size of snowflakes.
 **speed** | *Number* | *1.5* | Vertical speed of snowflakes. The larger, the snowflakes drop faster.
